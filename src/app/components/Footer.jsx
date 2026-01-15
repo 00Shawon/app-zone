@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BiWorld } from "react-icons/bi";
 
 
 export default function Footer() {
@@ -9,9 +10,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h2 className="text-xl font-semibold tracking-tight">
-              DevStories
-            </h2>
+            <Link
+            href="/"
+            className="text-lg font-semibold tracking-tight flex"
+          >
+              AppZ<span className="flex items-center text-blue-600 animate-spin"><BiWorld className="inline-block"/></span>ne
+            
+          </Link>
             <p className="mt-3 text-sm text-base-content/70 leading-relaxed">
               Crafting modern web experiences with precision, performance,
               and scalable architecture.
@@ -61,8 +66,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-base-content/60">
-            © {new Date().getFullYear()} DevStories. All rights reserved.
+          <p className="text-sm text-base-content/60 flex items-center">
+            © {new Date().getFullYear()}  AppZ<span className="text-blue-600"><BiWorld /></span>ne. All rights reserved.
           </p>
 
           <div className="flex gap-6">

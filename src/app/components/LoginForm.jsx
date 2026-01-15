@@ -13,7 +13,7 @@ export default function LoginForm() {
         e.preventDefault()
         if (email === "admin@example.com" && password === "123456") {
             document.cookie = "auth=true; path=/";
-            router.push("/store")
+            router.push("/add-items")
         }
         else {
 

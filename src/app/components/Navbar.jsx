@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BiWorld } from "react-icons/bi";
 
 export default function Navbar() {
   return (
@@ -9,9 +10,10 @@ export default function Navbar() {
           {/* Brand */}
           <Link
             href="/"
-            className="text-lg font-semibold tracking-tight"
+            className="text-lg font-semibold tracking-tight flex"
           >
-            DevStories
+              AppZ<span className="flex items-center text-blue-600 animate-spin"><BiWorld className="inline-block"/></span>ne
+            
           </Link>
 
           {/* Desktop Navigation */}
@@ -21,6 +23,9 @@ export default function Navbar() {
             </Link>
             <Link href="/store" className="hover:text-primary transition">
               Store
+            </Link>
+            <Link href="/add-items" className="hover:text-primary transition">
+              Add Items
             </Link>
             <Link href="/about" className="hover:text-primary transition">
               About
