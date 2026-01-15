@@ -113,7 +113,7 @@ const AddItemPage = () => {
                 <li>• Ensure code is well-documented.</li>
                 <li>• Remove all API keys and secrets.</li>
                 <li>• Screenshots must be 1200x800px.</li>
-                <li>• Include a 'readme.md' file.</li>
+                <li>• Include a readme.md file.</li>
               </ul>
             </div>
 

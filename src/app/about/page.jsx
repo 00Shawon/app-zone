@@ -39,7 +39,7 @@ const AboutPage = () => {
                   <div className="h-40 bg-white/5 rounded-2xl animate-pulse"></div>
                   <div className="h-40 bg-white/5 rounded-2xl animate-pulse mt-8"></div>
                </div>
-               <p className="mt-6 text-center text-sm text-white/40 font-mono italic">// Empowering 10k+ Developers Globally</p>
+               <p className="mt-6 text-center text-sm text-white/40 font-mono italic">Empowering 10k+ Developers Globally</p>
             </div>
           </div>
         </div>
