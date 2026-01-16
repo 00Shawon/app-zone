@@ -10,14 +10,14 @@ export default function Navbar() {
           {/* Brand */}
           <Link
             href="/"
-            className="text-lg font-semibold tracking-tight flex"
+            className="text-lg font-semibold tracking-tight flex items-center group"
           >
-              AppZ<span className="flex items-center text-blue-600 animate-spin"><BiWorld className="inline-block"/></span>ne
+              App Z <span className="flex items-center text-blue-600 animate-spin"><BiWorld className="inline-block"/></span> ne
             
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
             <Link href="/" className="hover:text-primary transition">
               Home
             </Link>
@@ -30,8 +30,14 @@ export default function Navbar() {
             <Link href="/about" className="hover:text-primary transition">
               About
             </Link>
+            <Link href="/features" className="hover:text-primary transition">
+              Features
+            </Link>
             <Link href="/policy" className="hover:text-primary transition">
               Policy
+            </Link>
+            <Link href="/blog" className="hover:text-primary transition">
+              Blog
             </Link>
           </nav>
 
@@ -81,11 +87,11 @@ export default function Navbar() {
                 <li>
                   <Link href="/login">Login</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/signup" className="text-primary font-medium">
                     Get Started
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </details>
           </div>

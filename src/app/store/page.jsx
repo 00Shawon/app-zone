@@ -1,11 +1,9 @@
 import AppCard from "../components/Card/AppCard";
+import posts from '../../../public/appData.json'
+
 
 
 export default async function Store() {
-  const data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/appData.json`
-  );
-  const posts = await data.json();
 
   return (
     <div className="bg-zinc-50 dark:bg-black">

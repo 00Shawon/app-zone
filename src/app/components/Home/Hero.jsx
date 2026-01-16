@@ -3,6 +3,7 @@ import React from "react";
 import hero from "../../../../public/hero.jpg";
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,14 +34,14 @@ const Hero = () => {
 
         <div className="flex flex-wrap gap-4 my-10">
           {/* Gradient Button 1 (Purple/Blue mix) */}
-          <button className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 shadow-lg">
+          <Link href={"/store"} className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 shadow-lg">
             Browse All <FaArrowRightLong size={18} className="animate-pulse"/>
-          </button>
+          </Link>
 
           {/* Gradient Button 2 (Deep Blue/Navy mix) */}
-          <button className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-900 to-indigo-900 border border-white/20 shadow-lg">
+          <Link href={"/store"} className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-blue-900 to-indigo-900 border border-white/20 shadow-lg">
             Download Now <FaRegArrowAltCircleDown size={18} className="animate-bounce"/>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

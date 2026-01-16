@@ -1,5 +1,7 @@
+
 import apps from '../../../public/appData.json';
 import React from "react";
+import DownloadButton from '../components/DownloadButton';
 
 
 
@@ -15,6 +17,11 @@ export default async function AppDetails({ params }) {
         <h1 className="text-2xl font-semibold">App not found</h1>
       </div>
     );
+  }
+  const handleDownload = (e) => {
+    e.preventDefault();
+    alert(`Downloading ${app.title}...`);
+    
   }
 
   return (
@@ -85,14 +92,7 @@ export default async function AppDetails({ params }) {
         </div>
 
         {/* Sticky Download Button */}
-        <div className="sticky bottom-4 md:bottom-10 z-50">
-          <a
-            href="#"
-            className="block md:inline-block w-full md:w-auto text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 px-10 rounded-2xl shadow-lg transition-all duration-300"
-          >
-            Download Now
-          </a>
-        </div>
+        <DownloadButton appTitle={app.title} />
       </div>
     </div>
   );

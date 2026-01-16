@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function LoginForm() {
     const router = useRouter();
@@ -14,6 +15,7 @@ export default function LoginForm() {
         if (email === "admin@example.com" && password === "123456") {
             document.cookie = "auth=true; path=/";
             router.push("/add-items")
+            toast.success("Login Successful !");
         }
         else {
 

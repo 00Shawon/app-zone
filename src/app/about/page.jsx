@@ -1,67 +1,94 @@
 import React from "react";
+import { FaUsers, FaGlobe, FaShieldHeart } from "react-icons/fa6";
 import { BiWorld } from "react-icons/bi";
-import { FaUsers, FaLightbulb, FaShieldAlt } from "react-icons/fa";
 
 const AboutPage = () => {
   return (
-    <div className="bg-[#0b0d17] min-h-screen text-white">
-      {/* 1. Header / Intro */}
-      <section className="relative py-20 px-6 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-gradient-to-b from-purple-600/20 to-transparent blur-3xl"></div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-blue-400">
-            Our Mission.
-          </h1>
-          <p className="text-xl text-white/70 leading-relaxed">
-            We started <span className="text-white font-bold inline-flex items-center gap-1">AppZ<BiWorld className="text-purple-500" />ne</span> with a simple idea: 
-            Building software should be accessible, secure, and fast. We’re creating a global ecosystem where developers and entrepreneurs thrive together.
-          </p>
-        </div>
+    <div className="bg-[#0b0d17] text-white min-h-screen">
+      {/* --- HERO SECTION --- */}
+      <section className="py-24 px-6 text-center border-b border-white/5">
+        <h1 className="text-5xl md:text-6xl font-black mb-6">
+          The Future of <br />
+          <span className="text-blue-500 italic">App Discovery.</span>
+        </h1>
+        <p className="max-w-3xl mx-auto text-white/50 text-lg leading-relaxed">
+          App Zone isn't just another download site. We are a global platform 
+          dedicated to providing safe, fast, and high-quality applications 
+          for users who value privacy and performance.
+        </p>
       </section>
 
-      {/* 2. The Story (Split Layout) */}
-      <section className="py-20 px-6 border-y border-white/5 bg-white/[0.01]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold">Why we built this platform</h2>
-            <p className="text-white/60 leading-relaxed">
-              In 2024, our founders noticed a recurring problem: entrepreneurs had great ideas but were held back by high development costs and long timelines. Meanwhile, talented developers had incredible code sitting in private repositories.
-            </p>
-            <p className="text-white/60 leading-relaxed">
-              We decided to bridge that gap. Today, App Zone is more than just a marketplace; it’s a launchpad for the next generation of digital products.
-            </p>
-          </div>
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <div className="relative bg-[#161b2c] p-8 rounded-3xl border border-white/10">
-               <div className="grid grid-cols-2 gap-4">
-                  <div className="h-40 bg-white/5 rounded-2xl animate-pulse"></div>
-                  <div className="h-40 bg-white/5 rounded-2xl animate-pulse mt-8"></div>
-               </div>
-               <p className="mt-6 text-center text-sm text-white/40 font-mono italic">Empowering 10k+ Developers Globally</p>
+      {/* --- OUR MISSION (3-Column Layout) --- */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="space-y-4">
+            <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-2xl">
+              <FaShieldHeart />
             </div>
+            <h3 className="text-2xl font-bold">Safety First</h3>
+            <p className="text-white/40 leading-relaxed">
+              In an era of digital threats, we manually verify every single upload. 
+              If it’s not 100% safe, it doesn’t make it onto App Zone.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-2xl">
+              <FaGlobe />
+            </div>
+            <h3 className="text-2xl font-bold">Global Access</h3>
+            <p className="text-white/40 leading-relaxed">
+              We believe great software should be available to everyone, everywhere. 
+              Our mirrors ensure high-speed access regardless of your location.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center text-2xl">
+              <FaUsers />
+            </div>
+            <h3 className="text-2xl font-bold">User Focused</h3>
+            <p className="text-white/40 leading-relaxed">
+              No intrusive ads, no confusing redirects. Just the apps you need 
+              in a clean, modern interface designed for humans.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 3. Core Values */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16">The Values We Live By</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: <FaShieldAlt />, title: "Trust First", desc: "Every line of code is manually reviewed to ensure security and quality." },
-              { icon: <FaLightbulb />, title: "Innovation", desc: "We support bleeding-edge tech, from AI integrations to Web3 dashboards." },
-              { icon: <FaUsers />, title: "Community", desc: "We win when our developers win. Support and collaboration are in our DNA." }
-            ].map((value, i) => (
-              <div key={i} className="p-10 rounded-3xl border border-white/5 bg-gradient-to-b from-white/5 to-transparent text-center hover:border-purple-500/50 transition-all">
-                <div className="text-4xl text-purple-500 flex justify-center mb-6">{value.icon}</div>
-                <h3 className="text-xl font-bold mb-4">{value.title}</h3>
-                <p className="text-white/50">{value.desc}</p>
-              </div>
-            ))}
+      {/* --- STATS SECTION --- */}
+      <section className="bg-white/5 border-y border-white/10 py-20 px-6">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-16 md:gap-32 text-center">
+          <div>
+            <h2 className="text-5xl font-black text-blue-500 mb-2">50M+</h2>
+            <p className="text-white/40 uppercase tracking-widest text-sm">Downloads</p>
           </div>
+          <div>
+            <h2 className="text-5xl font-black text-purple-500 mb-2">120K</h2>
+            <p className="text-white/40 uppercase tracking-widest text-sm">Verified Apps</p>
+          </div>
+          <div>
+            <h2 className="text-5xl font-black text-pink-500 mb-2">200+</h2>
+            <p className="text-white/40 uppercase tracking-widest text-sm">Countries</p>
+          </div>
+        </div>
+      </section>
+
+      {/* --- OUR STORY --- */}
+      <section className="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 className="text-3xl font-bold mb-8">Why we started App Zone</h2>
+        <p className="text-white/60 text-lg leading-relaxed mb-6">
+          We noticed that finding a reliable place to download apps had become a 
+          nightmare of pop-up ads and broken links. We decided to build a platform 
+          that puts the user experience first.
+        </p>
+        <p className="text-white/60 text-lg leading-relaxed">
+          Today, App Zone serves millions of users monthly, providing a curated 
+          experience that makes app discovery exciting again.
+        </p>
+        
+        <div className="mt-12 inline-flex items-center gap-2 text-blue-500 font-bold text-xl">
+          App Z<BiWorld />ne — The Last App Store You'll Ever Need.
         </div>
       </section>
     </div>

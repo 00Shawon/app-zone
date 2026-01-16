@@ -32,7 +32,7 @@ const Benefits = () => {
             
             <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-8 md:p-12 rounded-[2rem] backdrop-blur-xl shadow-2xl">
               <h4 className="text-2xl font-bold text-white mb-6 text-center">Built for Professionals</h4>
-              <ul className="grid md:grid-cols-2 space-y-6">
+              <ul className="grid md:grid-cols-2 gap-2">
                 {["Regular Code Updates", "Lifetime License", "Clean Documentation", "Refund Protection"].map((text, i) => (
                   <li key={i} className="flex items-center gap-4 text-white/80">
                     <div className="bg-green-500/20 p-1 rounded-full">
