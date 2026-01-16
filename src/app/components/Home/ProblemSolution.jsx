@@ -1,74 +1,73 @@
 import React from "react";
-import { FaRocket, FaLock, FaCode } from "react-icons/fa";
+import { FaBolt, FaShieldVirus, FaMobileAlt } from "react-icons/fa";
 
 const ProblemSolution = () => {
   const features = [
     {
-      title: "Fast-Track Development",
-      problem: "Coding from scratch takes months of work.",
-      solution: "Our pre-built premium apps let you launch in days, not months.",
-      icon: <FaRocket className="text-purple-500" />,
-      gradient: "from-purple-500/20 to-transparent",
+      title: "Instant Access",
+      problem: "Traditional stores are slow and filled with redirects.",
+      solution: "One-tap direct downloads at unrestricted network speeds.",
+      icon: <FaBolt className="text-yellow-500" />,
+      gradient: "from-yellow-500/10 to-transparent",
     },
     {
-      title: "Verified Security",
-      problem: "Random source code often contains vulnerabilities.",
-      solution: "Every app on our platform undergoes a rigorous security audit.",
-      icon: <FaLock className="text-blue-500" />,
-      gradient: "from-blue-500/20 to-transparent",
+      title: "Clean Experience",
+      problem: "Most sites are cluttered with invasive, risky ads.",
+      solution: "Enjoy a premium, ad-free interface designed for humans.",
+      icon: <FaShieldVirus className="text-green-500" />,
+      gradient: "from-green-500/10 to-transparent",
     },
     {
-      title: "Full Customization",
-      problem: "Templates are often too rigid and hard to edit.",
-      solution: "Get full source code access with clean, documented architecture.",
-      icon: <FaCode className="text-indigo-500" />,
-      gradient: "from-indigo-500/20 to-transparent",
+      title: "Device Harmony",
+      problem: "Apps often fail to work on specific system versions.",
+      solution: "Smart version matching ensures every download is compatible.",
+      icon: <FaMobileAlt className="text-blue-500" />,
+      gradient: "from-blue-500/10 to-transparent",
     },
   ];
 
   return (
-    <section className="bg-[#0b0d17] py-24 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-white text-4xl font-bold mb-4">
-              Stop reinventing the wheel. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Start scaling your business.
-              </span>
+    <section className="bg-[#0b0d17] py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Heading - Compact & Professional */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="max-w-xl">
+            <h2 className="text-white text-3xl font-bold mb-3">
+              Better apps. <span className="text-blue-500">Zero frustration.</span>
             </h2>
-            <p className="text-white/60 text-lg">
-              We bridge the gap between complex development and market-ready solutions.
+            <p className="text-white/50 text-sm leading-relaxed">
+              We fixed the biggest pain points of downloading software, creating 
+               a platform that values your time and security.
             </p>
           </div>
-          <button className="text-purple-400 font-medium hover:text-purple-300 transition-colors flex items-center gap-2">
-            View all features <span>→</span>
+          <button className="text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors flex items-center gap-2 group">
+            Explore the library <span className="group-hover:translate-x-1 transition-transform">→</span>
           </button>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((item, index) => (
             <div 
               key={index} 
-              className={`relative overflow-hidden p-8 rounded-3xl border border-white/10 bg-gradient-to-b ${item.gradient} backdrop-blur-sm group hover:border-white/20 transition-all duration-300`}
+              className={`relative overflow-hidden p-7 rounded-[2rem] border border-white/5 bg-gradient-to-b ${item.gradient} backdrop-blur-sm group hover:border-white/10 transition-all duration-300`}
             >
-              <div className="bg-white/10 w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              {/* Animated Icon Container */}
+              <div className="bg-white/5 w-12 h-12 rounded-2xl flex items-center justify-center text-xl mb-5 group-hover:scale-110 group-hover:bg-white/10 transition-all">
                 {item.icon}
               </div>
               
-              <h3 className="text-white text-xl font-bold mb-4">{item.title}</h3>
+              <h3 className="text-white text-lg font-bold mb-5">{item.title}</h3>
               
               <div className="space-y-4">
                 <div>
-                  <p className="text-red-400/80 text-xs uppercase tracking-widest font-bold mb-1">The Problem</p>
-                  <p className="text-white/50 text-sm leading-relaxed">{item.problem}</p>
+                  <p className="text-red-400/60 text-[10px] uppercase tracking-[0.2em] font-black mb-1">The Friction</p>
+                  <p className="text-white/40 text-xs leading-relaxed">{item.problem}</p>
                 </div>
                 
                 <div className="pt-4 border-t border-white/5">
-                  <p className="text-green-400/80 text-xs uppercase tracking-widest font-bold mb-1">Our Solution</p>
-                  <p className="text-white/80 text-sm leading-relaxed">{item.solution}</p>
+                  <p className="text-blue-400/70 text-[10px] uppercase tracking-[0.2em] font-black mb-1">The App Zone Way</p>
+                  <p className="text-white/70 text-sm leading-relaxed">{item.solution}</p>
                 </div>
               </div>
             </div>

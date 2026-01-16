@@ -4,7 +4,7 @@ import { BiWorld } from "react-icons/bi";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-base-100/90 backdrop-blur border-b border-base-300">
-      <div className="max-w-11/12 mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
 
           {/* Brand */}

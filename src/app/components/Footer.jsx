@@ -7,7 +7,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="bg-base-100 border-t border-base-300">
-      <div className="max-w-11/12 mx-auto px-6 py-14">
+      <div className="max-w-7xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
           {/* Brand */}

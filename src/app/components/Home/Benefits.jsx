@@ -1,65 +1,67 @@
 import React from "react";
-import { FaShieldAlt, FaBolt, FaHeadset, FaCheckCircle } from "react-icons/fa";
+import { FaShieldAlt, FaBolt, FaMagic, FaCheckCircle } from "react-icons/fa";
 
 const Benefits = () => {
   const benefitList = [
     {
-      title: "Secure Transactions",
-      desc: "Every purchase is protected by industry-leading encryption and secure payment gateways.",
-      icon: <FaShieldAlt className="text-blue-400" />,
+      title: "Privacy First",
+      desc: "We prioritize your data. All apps are vetted to ensure they follow strict privacy guidelines.",
+      icon: <FaShieldAlt className="text-blue-400 group-hover:text-white" />,
     },
     {
-      title: "Instant Access",
-      desc: "No waiting for manual approvals. Get your source code files immediately after payment.",
-      icon: <FaBolt className="text-purple-400" />,
+      title: "Lightning Downloads",
+      desc: "Our global server network ensures you get the apps you want at the highest possible speeds.",
+      icon: <FaBolt className="text-yellow-400 group-hover:text-white" />,
     },
     {
-      title: "Developer Support",
-      desc: "Direct access to original developers for troubleshooting and installation help.",
-      icon: <FaHeadset className="text-indigo-400" />,
+      title: "Smart Curation",
+      desc: "Tired of junk? Our team hand-picks the best tools and games so you don't have to search.",
+      icon: <FaMagic className="text-purple-400 group-hover:text-white" />,
     },
   ];
 
   return (
-    <section className="bg-[#0b0d17] py-24 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+    <section className="bg-[#0b0d17] py-16 px-6 overflow-hidden">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
           
-          {/* Left Side: Visual Element (The "Glow" Box) */}
-          <div className="relative w-full lg:w-1/2">
-            <div className="absolute -top-10 -left-10 w-64 h-64 bg-purple-600/20 rounded-full blur-[100px]"></div>
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-[100px]"></div>
+          {/* Left Side: The "Glow" Box (Scaled Down) */}
+          <div className="relative w-full lg:w-5/12">
+            {/* Subtle Glows */}
+            <div className="absolute -top-10 -left-10 w-48 h-48 bg-purple-600/10 rounded-full blur-[80px]"></div>
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600/10 rounded-full blur-[80px]"></div>
             
-            <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-8 md:p-12 rounded-[2rem] backdrop-blur-xl shadow-2xl">
-              <h4 className="text-2xl font-bold text-white mb-6 text-center">Built for Professionals</h4>
-              <ul className="grid md:grid-cols-2 gap-2">
-                {["Regular Code Updates", "Lifetime License", "Clean Documentation", "Refund Protection"].map((text, i) => (
-                  <li key={i} className="flex items-center gap-4 text-white/80">
-                    <div className="bg-green-500/20 p-1 rounded-full">
-                      <FaCheckCircle className="text-green-400" />
+            <div className="relative z-10 bg-white/[0.03] border border-white/10 p-8 rounded-[2rem] backdrop-blur-md">
+              <h4 className="text-lg font-bold text-white mb-6">Store Quality Standards</h4>
+              <ul className="grid grid-cols-1 gap-4">
+                {["Daily Malware Scans", "Verified Version Logs", "No Invasive Adware", "Auto-Update Support"].map((text, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/60">
+                    <div className="bg-green-500/10 p-1 rounded-full">
+                      <FaCheckCircle className="text-green-500 text-sm" />
                     </div>
-                    <span className="text-lg font-medium">{text}</span>
+                    <span className="text-sm font-medium">{text}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
-              A marketplace built on <span className="text-purple-500">Trust</span> and <span className="text-blue-500">Speed</span>.
+          {/* Right Side: Content (Condensed Typography) */}
+          <div className="w-full lg:w-7/12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
+              A better way to <span className="text-blue-500">discover</span> and <br className="hidden md:block" /> 
+              <span className="text-purple-500">install</span> your favorite software.
             </h2>
             
-            <div className="space-y-10">
+            <div className="space-y-8">
               {benefitList.map((benefit, index) => (
-                <div key={index} className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-gradient-to-br group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
+                <div key={index} className="flex gap-5 group">
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-xl group-hover:bg-blue-600 transition-all duration-300">
                     {benefit.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
-                    <p className="text-white/50 leading-relaxed">
+                    <h3 className="text-md font-bold text-white mb-1">{benefit.title}</h3>
+                    <p className="text-white/40 text-sm leading-relaxed max-w-md">
                       {benefit.desc}
                     </p>
                   </div>

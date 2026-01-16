@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AppCard({ app }) {
   return (
-    <div className="rounded-xl border border-base-300 bg-base-100 p-4 hover:shadow-md transition">
+    <div className="rounded-xl border border-base-300 bg-base-100 p-4 hover:shadow-md hover:scale-105 ease-in-out transition">
       
       {/* Header */}
       <div className="flex items-center gap-3 ">
