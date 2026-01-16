@@ -5,8 +5,7 @@
 ---
 
 ## 🔗 Project Links
-- **Live Demo:** [Insert Vercel Link Here]
-- **GitHub Repository:** [Insert Repo Link Here]
+- **Live Demo:**[ [Insert Vercel Link Here]](https://app-zone-one.vercel.app/)
 
 ### 🔑 Mock Credentials
 - **Email:** `admin@appzone.com`
